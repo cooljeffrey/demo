@@ -1,22 +1,19 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link } from "gatsby-theme-material-ui"
+import { Container, Box, Typography } from "@material-ui/core"
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+import ProTip from "../components/pro-tip"
+import Virtulize from "../components/search2"
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link> <br />
-    <Link to="/using-typescript/">Go to "Using TypeScript"</Link>
-  </Layout>
-)
-
-export default IndexPage
+export default function App() {
+  return (
+    <Container maxWidth="sm">
+      <Box my={4}>
+        <Typography variant="h4" component="h1" gutterBottom>
+          Filter 10,000 items dynamically
+        </Typography>
+        <Virtulize />
+      </Box>
+    </Container>
+  )
+}
